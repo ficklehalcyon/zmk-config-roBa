@@ -51,26 +51,15 @@
         };
     };
 
-    behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&mt LALT Q        &kp L         &kp U     &kp MINUS               &kp PERIOD                                               &kp F            &kp Y  &kp R  &kp W  &kp P
-&mt LEFT_SHIFT E  &kp I         &kp A     &kp O                   &kp COMMA    &kp LANG_ZENKAKUHANKAKU      &kp MINUS      &kp K            &kp S  &kp T  &kp N  &kp H
-&lt 4 Z           &kp X         &kp C     &kp V                   &kp PERIOD   &kp COLON                    &kp SEMICOLON  &kp G            &kp J  &kp D  &kp M  &lt 5 B
-&mt LCTRL ESC     &kp LEFT_WIN  &kp INT4  &lt_to_layer_0 6 LANG5  &lt 3 SPACE  &lt_to_layer_0 4 TAB         &kp ENTER      &lt 1 BACKSPACE                       &mt RCTRL ESCAPE
+&mt LALT Q        &kp L         &kp U     &kp MINUS  &kp PERIOD                                               &kp F            &kp Y  &kp R  &kp W  &kp P
+&mt LEFT_SHIFT E  &kp I         &kp A     &kp O      &kp COMMA    &kp LANG_ZENKAKUHANKAKU      &kp MINUS      &kp K            &kp S  &kp T  &kp N  &kp H
+&lt 4 Z           &kp X         &kp C     &kp V      &kp PERIOD   &kp COLON                    &kp SEMICOLON  &kp G            &kp J  &kp D  &kp M  &lt 5 B
+&mt LCTRL ESC     &kp LEFT_WIN  &kp INT4  &none      &lt 3 SPACE  &none                        &kp ENTER      &lt 1 BACKSPACE                       &mt RCTRL ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -78,10 +67,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                              &kp EQUAL       &kp N7        &kp NUMBER_8  &kp N9        &kp ASTERISK
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LCTRL       &kp UNDERSCORE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH
-&trans  &trans  &trans  &trans  &trans  &trans      &kp UNDERSCORE  &kp N0          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS
-&trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans                                                    &kp PLUS
+&kp LEFT_ALT  &kp F7  &kp F8  &kp F9  &kp F10                              &kp EQUAL       &kp N7        &kp NUMBER_8  &kp N9        &kp ASTERISK
+&kp LSHIFT    &kp F4  &kp F5  &kp F6  &kp F11  &trans      &kp LCTRL       &kp UNDERSCORE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SLASH
+&trans        &kp F1  &kp F2  &kp F3  &kp F12  &trans      &kp UNDERSCORE  &kp N0          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS
+&kp LCTRL     &trans  &trans  &trans  &trans   &trans      &trans          &trans                                                    &kp PLUS
             >;
         };
 
@@ -110,7 +99,7 @@
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mo 1                                 &trans
             >;
         };
 
