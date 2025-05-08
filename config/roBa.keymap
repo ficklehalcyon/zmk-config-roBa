@@ -60,6 +60,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        scrll: scrll {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "SCRLL";
+            #binding-cells = <1>;
+            x-input-code = <1>;
+            delay-ms = <0>;
+            time-to-max-speed-ms = <1>;
+            y-input-code = <0>;
+        };
     };
 
     keymap {
@@ -69,7 +79,7 @@
             bindings = <
 &mt LALT Q        &kp L         &kp U     &kp MINUS               &kp PERIOD                                               &kp F            &kp Y  &kp R  &kp W  &kp P
 &mt LEFT_SHIFT E  &kp I         &kp A     &kp O                   &kp COMMA    &kp LANG_ZENKAKUHANKAKU      &kp MINUS      &kp K            &kp S  &kp T  &kp N  &kp H
-&lt 4 Z           &kp X         &kp C     &kp V                   &kp PERIOD   &kp COLON                    &kp SEMICOLON  &kp G            &kp J  &kp D  &kp M  &lt 4 B
+&lt 4 Z           &kp X         &kp C     &kp V                   &kp PERIOD   &kp COLON                    &kp SEMICOLON  &kp G            &kp J  &kp D  &kp M  &lt 5 B
 &mt LCTRL ESC     &kp LEFT_WIN  &kp INT4  &lt_to_layer_0 6 LANG5  &lt 3 SPACE  &lt_to_layer_0 4 TAB         &kp ENTER      &lt 1 BACKSPACE                       &mt RCTRL ESCAPE
             >;
 
