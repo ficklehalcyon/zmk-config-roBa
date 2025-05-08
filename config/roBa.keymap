@@ -60,16 +60,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-
-        scrll: scrll {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "SCRLL";
-            #binding-cells = <1>;
-            x-input-code = <1>;
-            delay-ms = <0>;
-            time-to-max-speed-ms = <1>;
-            y-input-code = <0>;
-        };
     };
 
     keymap {
@@ -126,10 +116,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4  &mkp MB5  &mkp MB3  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
